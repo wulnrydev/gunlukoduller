@@ -135,6 +135,36 @@ public class DataManager {
             }
         });
     }
+
+    public void resetClaimTime(UUID uuid, String category) {
+        if (category == null) {
+            playerCache.remove(uuid);
+            Bukkit.getScheduler().runTaskAsynchronously(plugin, () -> {
+                String sql = "DELETE FROM daily_rewards WHERE uuid = ?";
+                try (PreparedStatement ps = connection.prepareStatement(sql)) {
+                    ps.setString(1, uuid.toString());
+                    ps.executeUpdate();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            });
+        } else {
+            Map<String, Long> map = playerCache.get(uuid);
+            if (map != null) {
+                map.remove(category);
+            }
+            Bukkit.getScheduler().runTaskAsynchronously(plugin, () -> {
+                String sql = "DELETE FROM daily_rewards WHERE uuid = ? AND category = ?";
+                try (PreparedStatement ps = connection.prepareStatement(sql)) {
+                    ps.setString(1, uuid.toString());
+                    ps.setString(2, category);
+                    ps.executeUpdate();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            });
+        }
+    }
     
     public void unloadPlayerCache(UUID uuid) {
         playerCache.remove(uuid);

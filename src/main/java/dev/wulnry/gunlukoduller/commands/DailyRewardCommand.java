@@ -31,6 +31,30 @@ public class DailyRewardCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+        if (args.length >= 2 && args[0].equalsIgnoreCase("sıfırla")) {
+            if (!sender.hasPermission("gunlukodul.admin")) {
+                sender.sendMessage(ColorUtils.format(plugin.getConfig().getString("settings.prefix", "") + plugin.getConfig().getString("messages.no-permission")));
+                return true;
+            }
+            
+            String targetName = args[1];
+            org.bukkit.OfflinePlayer offlineTarget = Bukkit.getPlayer(targetName);
+            if (offlineTarget == null) {
+                offlineTarget = Bukkit.getOfflinePlayer(targetName);
+            }
+            
+            if (offlineTarget == null || (!offlineTarget.hasPlayedBefore() && !offlineTarget.isOnline())) {
+                sender.sendMessage(ColorUtils.format(plugin.getConfig().getString("settings.prefix", "") + "&cOyuncu bulunamadı."));
+                return true;
+            }
+            
+            String category = args.length == 3 ? args[2] : null;
+            dataManager.resetClaimTime(offlineTarget.getUniqueId(), category);
+            
+            sender.sendMessage(ColorUtils.format(plugin.getConfig().getString("settings.prefix", "") + "&a" + offlineTarget.getName() + " adlı oyuncunun " + (category == null ? "tüm ödülleri" : category + " ödülü") + " sıfırlandı."));
+            return true;
+        }
+
         if (!(sender instanceof Player)) {
             sender.sendMessage(ColorUtils.format("&cBu komut sadece oyuncular tarafindan kullanilabilir."));
             return true;

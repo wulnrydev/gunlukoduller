@@ -50,6 +50,32 @@ public class GunlukOduller extends JavaPlugin implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
         dataManager.loadPlayerAsync(event.getPlayer().getUniqueId());
+        
+        Bukkit.getScheduler().runTaskLater(this, () -> {
+            Player p = event.getPlayer();
+            if (p.isOnline() && hasAvailableRewards(p)) {
+                String msg = getConfig().getString("messages.join-reminder");
+                if (msg != null && !msg.isEmpty()) {
+                    p.sendMessage(dev.wulnry.gunlukoduller.utils.ColorUtils.format(getConfig().getString("settings.prefix", "") + msg));
+                }
+            }
+        }, 60L);
+    }
+
+    public boolean hasAvailableRewards(Player player) {
+        org.bukkit.configuration.ConfigurationSection rewardsSection = getConfig().getConfigurationSection("rewards");
+        if (rewardsSection != null) {
+            for (String category : rewardsSection.getKeys(false)) {
+                org.bukkit.configuration.ConfigurationSection sec = rewardsSection.getConfigurationSection(category);
+                if (sec == null) continue;
+                String perm = sec.getString("permission");
+                boolean hasPerm = perm == null || perm.isEmpty() || player.hasPermission(perm);
+                if (hasPerm && dataManager.canClaim(player.getUniqueId(), category)) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     @EventHandler

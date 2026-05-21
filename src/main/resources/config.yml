@@ -109,3 +109,4 @@ messages:
   no-permission: '&cBu ödülü almak için yeterli yetkiniz yok!'
   already-claimed: '&cBu ödülü zaten aldınız, lütfen yarın tekrar deneyin.'
   error: '&cBir hata oluştu, lütfen daha sonra tekrar deneyin.'
+  join-reminder: '&#00D420Bugünlük ödülünüz hazır! &e/günlüködül &7yazarak hemen alabilirsiniz.'
