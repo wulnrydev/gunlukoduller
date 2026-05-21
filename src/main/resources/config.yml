@@ -23,94 +23,86 @@ rewards:
   oyuncu:
     slot: 10
     permission: 'gunlukodul.oyuncu'
-    name: '&7Oyuncu Ödülü'
+    name: '&#00D420Oyuncu Ödülü'
     lore:
-      - '&7Günlük oyuncu ödülünüzü'
-      - '&7almak için tıklayın.'
+      - '&7Günlük ödülünüzü'
+      - '&7almak için &#ffd500tıklayın.'
       - ''
-      - '&7Ödül: &e1000 TL'
-      - ''
-      - 'Durum: %status%'
+      - '&#ffd500Durum: %status%'
     commands:
-      - 'eco give %player% 1000'
+      - 'crates key give %player% gunluk 1'
   vip:
     slot: 11
     permission: 'gunlukodul.vip'
-    name: '&#00D420VIP Ödülü'
+    name: '&#fbd42cV&#fcbd30I&#fda634P &fÖdülü'
     lore:
-      - '&7Günlük VIP ödülünüzü'
-      - '&7almak için tıklayın.'
+      - '&7Günlük ödülünüzü'
+      - '&7almak için &#ffd500tıklayın.'
       - ''
-      - '&7Ödül: &e2500 TL'
-      - ''
-      - 'Durum: %status%'
+      - '&#ffd500Durum: %status%'
     commands:
-      - 'eco give %player% 2500'
+      - 'crates key give %player% gunluk 1'
+      - 'eco give %player% 500'
   vipplus:
     slot: 12
     permission: 'gunlukodul.vipplus'
-    name: '&#00D420VIP+ Ödülü'
+    name: '&#fbd42cV&#fcb531I&#fd9730P&#fd7a27+ &fÖdülü'
     lore:
-      - '&7Günlük VIP+ ödülünüzü'
-      - '&7almak için tıklayın.'
+      - '&7Günlük ödülünüzü'
+      - '&7almak için &#ffd500tıklayın.'
       - ''
-      - '&7Ödül: &e5000 TL'
-      - ''
-      - 'Durum: %status%'
+      - '&#ffd500Durum: %status%'
     commands:
-      - 'eco give %player% 5000'
+      - 'crates key give %player% gunluk 1'
+      - 'eco give %player% 1000'
   uvip:
     slot: 13
     permission: 'gunlukodul.uvip'
-    name: '&#ffd500UVIP Ödülü'
+    name: '&#ecbbfbU&#e28dfcV&#d85ffcI&#ce31fdP &fÖdülü'
     lore:
-      - '&7Günlük UVIP ödülünüzü'
-      - '&7almak için tıklayın.'
+      - '&7Günlük ödülünüzü'
+      - '&7almak için &#ffd500tıklayın.'
       - ''
-      - '&7Ödül: &e7500 TL'
-      - ''
-      - 'Durum: %status%'
+      - '&#ffd500Durum: %status%'
     commands:
-      - 'eco give %player% 7500'
+      - 'crates key give %player% gunluk 1'
+      - 'eco give %player% 1500'
   uvipplus:
     slot: 14
     permission: 'gunlukodul.uvipplus'
-    name: '&#ffd500UVIP+ Ödülü'
+    name: '&#ecbbfbU&#dd76fcV&#ce31fdI&#cc4dfdP&#c969fd+ &fÖdülü'
     lore:
-      - '&7Günlük UVIP+ ödülünüzü'
-      - '&7almak için tıklayın.'
+      - '&7Günlük ödülünüzü'
+      - '&7almak için &#ffd500tıklayın.'
       - ''
-      - '&7Ödül: &e10000 TL'
-      - ''
-      - 'Durum: %status%'
+      - '&#ffd500Durum: %status%'
     commands:
-      - 'eco give %player% 10000'
+      - 'crates key give %player% gunluk 1'
+      - 'eco give %player% 2000'
   mossvip:
     slot: 15
     permission: 'gunlukodul.mossvip'
-    name: '&#00D420MossVIP Ödülü'
+    name: '&2M&ao&2s&as&2V&aI&2P &fÖdülü'
     lore:
-      - '&7Günlük MossVIP ödülünüzü'
-      - '&7almak için tıklayın.'
+      - '&7Günlük ödülünüzü'
+      - '&7almak için &#ffd500tıklayın.'
       - ''
-      - '&7Ödül: &e15000 TL'
-      - ''
-      - 'Durum: %status%'
+      - '&#ffd500Durum: %status%'
     commands:
-      - 'eco give %player% 15000'
+      - 'crates key give %player% gunluk 1'
+      - 'eco give %player% 2500'
   mossvipplus:
     slot: 16
     permission: 'gunlukodul.mossvipplus'
-    name: '&#00D420MossVIP+ Ödülü'
+    name: '&2M&ao&2s&as&2V&aI&2P&a+ &fÖdülü'
     lore:
-      - '&7Günlük MossVIP+ ödülünüzü'
-      - '&7almak için tıklayın.'
+      - '&7Günlük ödülünüzü'
+      - '&7almak için &#ffd500tıklayın.'
       - ''
-      - '&7Ödül: &e20000 TL'
-      - ''
-      - 'Durum: %status%'
+      - '&#ffd500Durum: %status%'
     commands:
-      - 'eco give %player% 20000'
+      - 'crates key give %player% gunluk 1'
+      - 'eco give %player% 3000'
 
 messages:
   success: '&7Ödülünüzü başarıyla aldınız!'
