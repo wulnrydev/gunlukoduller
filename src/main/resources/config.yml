@@ -1,0 +1,119 @@
+settings:
+  prefix: '&#15FF08&lSurvival &8▸ '
+  cooldown-type: "HOURS" # Options: "HOURS" (24 hours) or "MIDNIGHT" (Resets at 00:00 every day)
+  cooldown-hours: 24
+
+menu:
+  title: '&0Günlük Ödül'
+  size: 36
+  assistant-slot: 31
+  assistant-item:
+    material: ARROW
+    name: '&#00D420Asistan Menüsüne Dön'
+  
+  available-item:
+    material: CHEST_MINECART
+    status-lore: '&#00D420Alınabilir'
+  
+  unavailable-item:
+    material: TNT_MINECART
+    status-lore: '&cAlınamaz'
+
+rewards:
+  oyuncu:
+    slot: 10
+    permission: 'gunlukodul.oyuncu'
+    name: '&7Oyuncu Ödülü'
+    lore:
+      - '&7Günlük oyuncu ödülünüzü'
+      - '&7almak için tıklayın.'
+      - ''
+      - '&7Ödül: &e1000 TL'
+      - ''
+      - 'Durum: %status%'
+    commands:
+      - 'eco give %player% 1000'
+  vip:
+    slot: 11
+    permission: 'gunlukodul.vip'
+    name: '&#00D420VIP Ödülü'
+    lore:
+      - '&7Günlük VIP ödülünüzü'
+      - '&7almak için tıklayın.'
+      - ''
+      - '&7Ödül: &e2500 TL'
+      - ''
+      - 'Durum: %status%'
+    commands:
+      - 'eco give %player% 2500'
+  vipplus:
+    slot: 12
+    permission: 'gunlukodul.vipplus'
+    name: '&#00D420VIP+ Ödülü'
+    lore:
+      - '&7Günlük VIP+ ödülünüzü'
+      - '&7almak için tıklayın.'
+      - ''
+      - '&7Ödül: &e5000 TL'
+      - ''
+      - 'Durum: %status%'
+    commands:
+      - 'eco give %player% 5000'
+  uvip:
+    slot: 13
+    permission: 'gunlukodul.uvip'
+    name: '&#ffd500UVIP Ödülü'
+    lore:
+      - '&7Günlük UVIP ödülünüzü'
+      - '&7almak için tıklayın.'
+      - ''
+      - '&7Ödül: &e7500 TL'
+      - ''
+      - 'Durum: %status%'
+    commands:
+      - 'eco give %player% 7500'
+  uvipplus:
+    slot: 14
+    permission: 'gunlukodul.uvipplus'
+    name: '&#ffd500UVIP+ Ödülü'
+    lore:
+      - '&7Günlük UVIP+ ödülünüzü'
+      - '&7almak için tıklayın.'
+      - ''
+      - '&7Ödül: &e10000 TL'
+      - ''
+      - 'Durum: %status%'
+    commands:
+      - 'eco give %player% 10000'
+  mossvip:
+    slot: 15
+    permission: 'gunlukodul.mossvip'
+    name: '&#00D420MossVIP Ödülü'
+    lore:
+      - '&7Günlük MossVIP ödülünüzü'
+      - '&7almak için tıklayın.'
+      - ''
+      - '&7Ödül: &e15000 TL'
+      - ''
+      - 'Durum: %status%'
+    commands:
+      - 'eco give %player% 15000'
+  mossvipplus:
+    slot: 16
+    permission: 'gunlukodul.mossvipplus'
+    name: '&#00D420MossVIP+ Ödülü'
+    lore:
+      - '&7Günlük MossVIP+ ödülünüzü'
+      - '&7almak için tıklayın.'
+      - ''
+      - '&7Ödül: &e20000 TL'
+      - ''
+      - 'Durum: %status%'
+    commands:
+      - 'eco give %player% 20000'
+
+messages:
+  success: '&7Ödülünüzü başarıyla aldınız!'
+  no-permission: '&cBu ödülü almak için yeterli yetkiniz yok!'
+  already-claimed: '&cBu ödülü zaten aldınız, lütfen yarın tekrar deneyin.'
+  error: '&cBir hata oluştu, lütfen daha sonra tekrar deneyin.'

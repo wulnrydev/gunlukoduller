@@ -1,0 +1,11 @@
+name: GunlukOduller
+version: '${project.version}'
+main: dev.wulnry.gunlukoduller.GunlukOduller
+api-version: '1.21'
+author: wulnrydev
+description: Daily rewards plugin for Paper 1.21+
+
+commands:
+  günlüködül:
+    description: Günlük ödül menüsünü açar
+    aliases: [gunlukodul, dailyreward]
